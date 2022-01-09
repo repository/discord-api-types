@@ -10,5 +10,5 @@
 			"line_length": 120
 		}
 	},
-	"globs": ["docs/{Guide,General}/**/*.{md,mdx}"]
+	"globs": ["docs/**/*.{md,mdx}"]
 }

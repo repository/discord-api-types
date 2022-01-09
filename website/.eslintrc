@@ -1,13 +1,14 @@
 {
 	"root": true,
-	"extends": ["@sapphire", "plugin:import/typescript"],
+	"extends": ["marine/prettier/react", "plugin:import/typescript"],
 	"parserOptions": {
 		"ecmaVersion": 2020,
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"jsx": true
+		"jsx": true,
+		"project": "./tsconfig.eslint.json"
 	},
 	"plugins": ["import", "jsx-a11y", "react", "react-hooks"],
 	"settings": {
