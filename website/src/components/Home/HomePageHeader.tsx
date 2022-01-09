@@ -11,9 +11,9 @@ const HomePageHeader: FC = () => {
 		<>
 			<header className={clsx('hero', styles.heroBanner)}>
 				<div className="container">
-					<img src="/img/gem.svg" alt="Discord API Types Logo" className={styles.logo}></img>
+					<img src="/img/logo.svg" alt="Discord API Types Logo" className={styles.logo}></img>
 					<h1 className="hero__title">{siteConfig.title}</h1>
-					<h2 className={styles.extraMarginTop}>Simple to use typings to use when working with Discord's API</h2>
+					<h2 className={styles.extraMarginTop}>In-depth typings you can use when working with Discord's API</h2>
 					<InstallTabs />
 				</div>
 			</header>

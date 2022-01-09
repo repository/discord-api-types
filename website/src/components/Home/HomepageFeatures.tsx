@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
 				discord-api-types is a simple module that helps you work with the data returned from Discord's API.
 				<br />
 				<br />
-				With this module, you're able to work with raw data while also making sure what you access exists, and what type it may be
+				With this module, you're able to work with raw data while also making sure what you access exists, and what type it may be.
 			</>
 		)
 	},

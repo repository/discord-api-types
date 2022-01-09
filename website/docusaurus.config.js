@@ -1,5 +1,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+const { npm2yarn2pnpm } = require('@sapphire/docusaurus-plugin-npm2yarn2pnpm');
+const { ts2esm2cjs } = require('@sapphire/docusaurus-plugin-ts2esm2cjs');
 const { join } = require('path');
 
 const Description = "Discord API Types is a simple Node/Deno module that brings up to date typings for Discord's API";
@@ -50,7 +52,6 @@ const config = {
 			'docusaurus-plugin-typedoc-api',
 			{
 				projectRoot: join(__dirname, '../'),
-				readmes: true,
 				packages: [
 					{
 						path: './',
@@ -75,7 +76,8 @@ const config = {
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					showLastUpdateAuthor: false,
-					showLastUpdateTime: false
+					showLastUpdateTime: false,
+					remarkPlugins: [npm2yarn2pnpm, ts2esm2cjs]
 				},
 				blog: false,
 				theme: {
@@ -141,7 +143,7 @@ const config = {
 				title: 'Discord API Types',
 				logo: {
 					alt: 'Discord API Types Logo',
-					src: 'img/gem.svg'
+					src: 'img/logo.svg'
 				},
 				items: [
 					{
