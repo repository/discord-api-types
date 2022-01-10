@@ -56,10 +56,24 @@ const config = {
 					{
 						path: './',
 						entry: {
-							v6: { path: 'v6.ts', label: 'API v6' },
+							globals: { path: 'globals.ts', label: 'Global Types' },
+							v6: { path: 'v6.ts', label: 'API v6 - Deprecated' },
 							v8: { path: 'v8.ts', label: 'API v8' },
 							v9: { path: 'v9.ts', label: 'API v9' },
-							globals: { path: 'globals.ts', label: 'Global Types' }
+							'gateway/v6': { path: 'gateway/v6.ts', label: 'Gateway v6 - Deprecated' },
+							'gateway/v8': { path: 'gateway/v8.ts', label: 'Gateway v8' },
+							'gateway/v9': { path: 'gateway/v9.ts', label: 'Gateway v9' },
+							'payloads/v6': { path: 'payloads/v6/index.ts', label: 'Payloads v6 - Deprecated' },
+							'payloads/v8': { path: 'payloads/v8/index.ts', label: 'Payloads v8' },
+							'payloads/v9': { path: 'payloads/v9/index.ts', label: 'Payloads v9' },
+							'rest/v6': { path: 'rest/v6/index.ts', label: 'REST v6 - Deprecated' },
+							'rest/v8': { path: 'rest/v8/index.ts', label: 'REST v8' },
+							'rest/v9': { path: 'rest/v9/index.ts', label: 'REST v9' },
+							'rpc/v8': { path: 'rpc/v8.ts', label: 'RPC v8' },
+							'rpc/v9': { path: 'rpc/v9.ts', label: 'RPC v9' },
+							'voice/v4': { path: 'voice/v4.ts', label: 'Voice v4' },
+							'utils/v8': { path: 'utils/v8.ts', label: 'Utils v8' },
+							'utils/v9': { path: 'utils/v9.ts', label: 'Utils v9' }
 						},
 						slug: 'discord-api-types'
 					}
