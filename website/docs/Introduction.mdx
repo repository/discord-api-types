@@ -1,6 +1,6 @@
 ---
 id: introduction_to_discord-api-types
-title: Introduction to Discord API Types
+title: Introduction
 sidebar_position: 0
 ---
 
@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center">
 
-<!-- ![Discord API Types Logo](/img/logo.svg) -->
+<!-- ![Discord API Types Logo](pathname:///img/logo.svg) -->
 
 [![Discord server](https://img.shields.io/discord/222078108977594368?color=5865F2&logo=discord&logoColor=white)](https://discord-api-types.dev/discord)
 [![Patreon Donate](https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&link=https://www.patreon.com/vladfrangu)](https://www.patreon.com/vladfrangu)
@@ -78,7 +78,7 @@ const user = {} as APIUser;
 
 You may also import just certain parts of the module that you need. The possible values are: `globals`, `gateway`,
 `gateway/v*`, `payloads`, `payloads/v*`, `rest`, `rest/v*`, `rpc`, `rpc/v*`, `utils`, `utils/v*`, `voice`, and
-`voice/v*`. Below are some examples
+`voice/v*`. Below is an example of importing directly from the gateway submodule
 
 ```typescript ts2esm2cjs
 import { GatewayVersion } from 'discord-api-types/gateway/v9';

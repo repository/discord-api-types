@@ -3,6 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 const { npm2yarn2pnpm } = require('@sapphire/docusaurus-plugin-npm2yarn2pnpm');
 const { ts2esm2cjs } = require('@sapphire/docusaurus-plugin-ts2esm2cjs');
 const { join } = require('path');
+const versions = require('./versions.json');
 
 const Description = "Discord API Types is a simple Node/Deno module that brings up to date typings for Discord's API";
 const BaseUrl = 'https://discord-api-types.dev';
@@ -123,9 +124,9 @@ const config = {
 				{ name: 'googlebot', content: 'index,follow' },
 				{ name: 'HandheldFriendly', content: 'True' },
 				{ name: 'identifier-URL', content: BaseUrl },
-				{ name: 'keywords', content: 'discord, bot, framework, documentation, guide, discord-api-types' },
+				{ name: 'keywords', content: 'discord, bot, discord api, documentation, guide, discord-api-types' },
 				{ name: 'msapplication-config', content: '/browserconfig.xml' },
-				{ name: 'msapplication-TileColor', content: '#23529B' },
+				{ name: 'msapplication-TileColor', content: '#242526' },
 				{ name: 'msapplication-TileImage', content: '/icons/mstile-144x144.png' },
 				{ name: 'owner', content: `Vlad Frangu, ${Email}` },
 				{ name: 'rating', content: 'safe for kids' },
@@ -136,7 +137,7 @@ const config = {
 				{ name: 'subject', content: 'Documentation website for Discord API Types' },
 				{ name: 'summary', content: Description },
 				{ name: 'target', content: 'all' },
-				{ name: 'theme-color', content: '#23529B' },
+				{ name: 'theme-color', content: '#242526' },
 				{ name: 'twitter:card', content: 'summary' },
 				{ name: 'twitter:creator', content: '@WolfgalVlad' },
 				{ name: 'twitter:site', content: '@WolfgalVlad' },
@@ -167,13 +168,22 @@ const config = {
 						activeBaseRegex: '^/$'
 					},
 					{
-						to: 'api',
-						label: 'API',
+						to: 'docs/introduction_to_discord-api-types',
+						label: 'Introduction to the module',
 						position: 'left'
 					},
 					{
-						type: 'docsVersionDropdown',
-						position: 'right'
+						type: 'dropdown',
+						to: 'api',
+						label: 'API',
+						position: 'left',
+						items: [
+							{ label: versions.length === 0 ? 'Development Time' : '@next', to: versions.length === 0 ? 'api' : 'api/next' },
+							...versions.map((version, i) => ({
+								label: version,
+								to: i === 0 ? 'api' : `api/${version}`
+							}))
+						]
 					}
 				]
 			},
